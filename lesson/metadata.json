@@ -1,0 +1,50 @@
+{
+  "name": "asklep-linuxbase",
+  "version": "1.1.0",
+  "author": "asklep inc.",
+  "summary": "",
+  "license": "Apache License, Version 2.0",
+  "source": "",
+  "project_page": "",
+  "issues_url": "",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.0.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.0.0"
+    }
+  ],
+  "description": "",
+  "dependencies": [
+  
+  ]
+}
