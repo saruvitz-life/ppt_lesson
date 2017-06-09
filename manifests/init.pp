@@ -1,7 +1,8 @@
 class ppt_lesson {
 
-  # 以下の2つのクラスを定義して、動作を確認してみましょう。
-  # クラス定義とファイル配置の関係について理解することができるでしょう。
+  # init.pp
+  # <モジュールpath>/<モジュール名>/manifests/init.pp
+  #
   class ppt_lesson::lesson1 
   class ppt_lesson::lesson1::sample1
 
