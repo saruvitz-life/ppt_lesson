@@ -1,2 +1,2 @@
-# ppt_lesson
+# puppet の演習
 Puppet Lesson 1
