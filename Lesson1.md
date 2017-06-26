@@ -17,6 +17,25 @@ class ppt_lesson::lesson1::sample1 {
   }
 
 }
+# cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+include ppt_lesson::lesson1::sample1
+
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+
+※以下のコマンドを実行すると、/tmp/test.txtが作成されます。
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+Notice: Compiled catalog for server1 in environment production in 0.09 seconds
+Notice: /Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
+Notice: Finished catalog run in 0.33 seconds
+Notice: //server1//Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
+Notice: //server1/Puppet: Finished catalog run in 0.33 seconds
+
+※２度目を実行すると、何もおこなわれません。
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+Notice: Compiled catalog for server1 in environment production in 0.09 seconds
+Notice: Finished catalog run in 0.36 seconds
+Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
+
 ~~~~
 ## sample2.pp
 このモジュールは、/tmp/test1.txtに出力するテキストをパラメータとして引き渡すサンプルです。 
