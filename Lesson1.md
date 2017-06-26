@@ -17,10 +17,10 @@ class ppt_lesson::lesson1::sample1 {
   }
 
 }
+
+※上記のモジュールを使用するマニフェストを、以下のとおり作成します。
 # cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 include ppt_lesson::lesson1::sample1
-
-# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 
 ※以下のコマンドを実行すると、/tmp/test.txtが作成されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
