@@ -1,6 +1,11 @@
-# Puppet演習
+# Puppetの演習
 ## Puppet Lesson 1 モジュールを準備する
-この演習を始める前に、モジュールの配置先を確認してみましょう。
+この演習ではインストールの説明を省略しています。
+公式サイトのインストール手順に従い、パッケージをインストールしてください。
+https://docs.puppet.com/puppet/4.10/install_pre.html
+
+次にこの演習を始める前に、演習で使用するモジュールを準備しましょう。
+モジュールの配置先の情報を確認してみましょう。
 ~~~~
 # puppet config print | grep module
 module_repository = https://forgeapi.puppetlabs.com
