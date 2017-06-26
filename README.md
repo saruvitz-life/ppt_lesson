@@ -1,5 +1,5 @@
 # Puppet演習
-Puppet Lesson 1
+## Puppet Lesson 1 モジュールを準備する
 この演習を始める前に、モジュールの配置先を確認してみましょう。
 ~~~~
 # puppet config print | grep module
@@ -9,6 +9,7 @@ module_groups =
 modulepath = /etc/puppet/modules:/usr/share/puppet/modules
 module_working_dir = /var/lib/puppet/puppet-module
 basemodulepath = /etc/puppet/modules:/usr/share/puppet/modules
+# puppet module list | grep ppt_lesson
 #
 ~~~~
 モジュールの配置先を確認したら、以下のコマンドでモジュールを展開してみましょう。
