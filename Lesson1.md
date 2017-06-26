@@ -17,3 +17,13 @@
 # 
 
 ~~~~
+
+## factの確認
+### Linux
+~~~~
+# facter -p
+~~~~
+### Windows
+~~~~
+C:\Program Files\Puppet Labs\Puppet\bin> facter -p
+~~~~ 
