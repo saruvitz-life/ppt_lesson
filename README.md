@@ -17,10 +17,8 @@ basemodulepath = /etc/puppet/modules:/usr/share/puppet/modules
 #
 ~~~~
 モジュールの配置先を確認したら、以下のコマンドでモジュールを展開してみましょう。  
-Puppetのモジュールのインストールには、通常 puppet module install を使用しますが、
-今回の演習では git を使用して配置します。  
-モジュールが展開されると、/etc/puppet/modules/ppt_lessonの
-ディレクトリがあることを確認してください。  
+通常 puppet module install を使用しますが、今回の演習では git を使用して配置します。  
+モジュールが展開されると、/etc/puppet/modules/ppt_lessonのディレクトリが作成されます。  
 ~~~~
 # git clone https://github.com/saruvitz-life/ppt_lesson.git
 Initialized empty Git repository in /etc/puppet/modules/ppt_lesson/.git/
@@ -34,14 +32,14 @@ Unpacking objects: 100% (91/91), done.
 モジュールの情報が表示されると思います。  
 ~~~~
 # puppet module list | grep Lesson
-tqq Puppet Beginners Lesson (v1.1.0)
+├ Puppet Beginners Lesson (v1.1.0)
 ~~~~
-次に site.pp を作成します。  
+それではマニフェスト次に site.pp を作成します。  
 site.ppからモジュールを読み出すようにします。。  
 ~~~~
-# puppet apply /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample1.pp
-Notice: Compiled catalog for xxxxxx.domain.co.jp in environment production in 0.02 seconds
-Notice: Finished catalog run in 0.36 seconds
-Notice: //xxxxxx.domain.co.jp/Puppet: Finished catalog run in 0.36 seconds  
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/init.pp
+Notice: Compiled catalog for ******.******.co.jp in environment production in 0.02 seconds
+Notice: Finished catalog run in 0.29 seconds
+Notice: //crosv1404ngs2.mictokyo.co.jp/Puppet: Finished catalog run in 0.29 seconds
 
 ~~~~
