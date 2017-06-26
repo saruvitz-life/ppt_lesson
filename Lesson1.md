@@ -17,3 +17,19 @@
 # 
 
 ~~~~
+## sample4.pp
+このモジュールは、ファイルが存在する場合にファイルを取り消すサンプルです。 
+~~~~
+# 
+
+~~~~
+## factの確認
+以下のコマンドを実行し、Puppetで使用できるfactを確認してみましょう。
+### Linux
+~~~~
+# facter -p
+~~~~
+### Windows
+~~~~
+C:\Program Files\Puppet Labs\Puppet\bin> facter -p
+~~~~ 
