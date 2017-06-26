@@ -1,5 +1,5 @@
 # Puppetの演習
-## Puppet Lesson 1 モジュールを準備する
+## Lesson 1 モジュールを準備する
 公式のインストール手順に従い、Puppetのパッケージをインストールしてください。  
 https://docs.puppet.com/puppet/4.10/install_pre.html
 
@@ -16,8 +16,19 @@ basemodulepath = /etc/puppet/modules:/usr/share/puppet/modules
 # puppet module list | grep ppt_lesson
 #
 ~~~~
-モジュールの配置先を確認したら、以下のコマンドでモジュールを展開してみましょう。
+モジュールの配置先を確認したら、以下のコマンドでモジュールを展開してみましょう。  
 Puppetでは、モジュールのインストールに puppet module install を使用しますが、
-今回の演習では git を使用することにします。
+今回の演習では git を使用することにします。  
 モジュールが展開されると、/etc/puppet/modules/ppt_lessonの
-ディレクトリがあることを確認してください。
+ディレクトリがあることを確認してください。  
+~~~~
+# git
+#
+~~~~
+モジュールを配置したら、以下のコマンドでマニフェストを適用してみましょう。  
+実際の適用にはエージェントなどを使用しますので、  
+~~~~
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample1.pp
+
+
+~~~~
