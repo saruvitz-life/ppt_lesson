@@ -8,7 +8,7 @@ class ppt_lesson::lesson1::sample1 {
   # とくにクラス名とファイルの配置位置に気を付けて確認してみましょう。
   #
   file { '/tmp/test.txt':
-    contents => "Hello world"
+    content => "Hello world"
   }
 
 }
