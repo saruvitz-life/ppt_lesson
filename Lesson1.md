@@ -30,7 +30,7 @@ Notice: Finished catalog run in 0.33 seconds
 Notice: //server1//Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
 Notice: //server1/Puppet: Finished catalog run in 0.33 seconds
 
-※２度目を実行すると、何もおこなわれません。
+※２度目を実行すると、今度は何もおこなわれません。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 Notice: Compiled catalog for server1 in environment production in 0.09 seconds
 Notice: Finished catalog run in 0.36 seconds
