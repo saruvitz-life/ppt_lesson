@@ -2,8 +2,21 @@
 ## sample1.pp
 このモジュールはfileリソースを使用し、/tmp/test1.txtを作成します。  
 ~~~~
-#   
+# cat   
+class ppt_lesson::lesson1::sample1 {
 
+  # fileリソースの使い方
+  # https://docs.puppet.com/puppet/latest/types/file.html
+  # 
+  # 説明：
+  # このマニフェストはごく初歩的なマニフェストです。
+  # とくにクラス名とファイルの配置位置に気を付けて確認してみましょう。
+  #
+  file { '/tmp/test.txt':
+    content => "Hello world"
+  }
+
+}
 ~~~~
 ## sample2.pp
 このモジュールは、/tmp/test1.txtに出力するテキストをパラメータとして引き渡すサンプルです。 
