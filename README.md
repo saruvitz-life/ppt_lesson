@@ -3,7 +3,7 @@
 公式のインストール手順に従い、Puppetのパッケージをインストールしてください。  
 https://docs.puppet.com/puppet/4.10/install_pre.html
 
-次にこの演習を始める前に、演習で使用するモジュールを準備しましょう。  
+次に演習を始める前に、演習で使用するモジュールを準備しましょう。  
 モジュールの配置先の情報を確認してみましょう。  
 ~~~~
 # puppet config print | grep module
