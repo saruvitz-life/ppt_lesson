@@ -10,7 +10,7 @@ class ppt_lesson::lesson1::sample5 {
       "puppet:///modules/ppt_lesson/test.txt.${operatingsystem}",
       "puppet:///modules/ppt_lesson/test.txt"
     ],
-    mode	=> "0777",
+    mode	=> "0644",
     owner	=> "puppet",
     group	=> "puppet",
   }
