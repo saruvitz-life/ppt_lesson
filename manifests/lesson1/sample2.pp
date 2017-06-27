@@ -6,6 +6,6 @@ class ppt_lesson::lesson1::sample2 (
   # https://docs.puppet.com/puppet/latest/types/file.html
   # 
   file { '/tmp/test.txt':
-    contents => ${msg}
+    content => ${msg}
   }
 }
