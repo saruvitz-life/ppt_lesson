@@ -1,4 +1,4 @@
-# Puppetの演習
+# PUPPETの演習
 ## モジュールを準備する
 公式のインストール手順に従い、Puppetのパッケージをインストールしてください。  
 https://docs.puppet.com/puppet/4.10/install_pre.html
@@ -13,13 +13,10 @@ module_groups =
 modulepath = /etc/puppet/modules:/usr/share/puppet/modules
 module_working_dir = /var/lib/puppet/puppet-module
 basemodulepath = /etc/puppet/modules:/usr/share/puppet/modules
-# puppet module list | grep ppt_lesson
-#
-~~~~
-モジュールの配置先を確認したら、以下のコマンドでモジュールを展開してみましょう。  
-通常 puppet module install を使用しますが、今回の演習では git を使用して配置します。  
-モジュールが展開されると、/etc/puppet/modules/ppt_lessonのディレクトリが作成されます。  
-~~~~
+
+# cd /etc/puppet/modules
+
+※リモート側からクローンを作成する場合(初回)
 # git clone https://github.com/saruvitz-life/ppt_lesson.git
 Initialized empty Git repository in /etc/puppet/modules/ppt_lesson/.git/
 remote: Counting objects: 91, done.
@@ -27,12 +24,14 @@ remote: Compressing objects: 100% (64/64), done.
 remote: Total 91 (delta 29), reused 56 (delta 14), pack-reused 0
 Unpacking objects: 100% (91/91), done.  
 
-~~~~
-モジュールを配置したら、以下のコマンドでモジュールを確認してみましょう。  
-モジュールの情報が表示されると思います。  
-~~~~
-# puppet module list | grep Lesson
+※リモート側からローカル側に同期する場合
+# git fetch origin
+# git reset --hard origin/master
+
+※モジュールの設定情報を確認します。
+# puppet module list | grep ppt_lesson
 ├ Puppet Beginners Lesson (v1.1.0)
+
 ~~~~
 それではマニフェストを1つ適用してみましょう。  
 マニフェストが適用されると、/tmp/test.txt が作成されます。  
