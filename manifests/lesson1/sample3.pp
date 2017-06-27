@@ -11,8 +11,8 @@ class ppt_lesson::lesson1::sample3 {
   file { '/tmp/test.txt':
     source => [
       "puppet:///modules/ppt_lesson/test.txt.${host}",
-      "puppet:///modules/ppt_lesson/test.txt.conf.${operatingsystem}",
-      "puppet:///modules/ppt_lesson/test.txt.conf"
+      "puppet:///modules/ppt_lesson/test.txt.${operatingsystem}",
+      "puppet:///modules/ppt_lesson/test.txt"
     ]
   }
 
