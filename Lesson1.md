@@ -22,6 +22,10 @@ class ppt_lesson::lesson1::sample1 {
 # cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 include ppt_lesson::lesson1::sample1
 
+※マニフェストは、以下のように記述することもできます。
+# cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+class { 'ppt_lesson::lesson1::sample1': }
+
 ※以下のコマンドを実行すると、/tmp/test.txtが作成されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 Notice: Compiled catalog for server1 in environment production in 0.09 seconds
