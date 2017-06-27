@@ -52,7 +52,14 @@ Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
 ## sample4.pp
 このモジュールは、ファイルが存在する場合にファイルを取り消すサンプルです。 
 ~~~~
-# 
+# cat  
+
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test4.pp
+Notice: Compiled catalog for server1 in environment production in 0.11 seconds
+Notice: /Stage[main]/Ppt_lesson::Lesson1::Sample4/File[/tmp/test.txt]/ensure: removed
+Notice: Finished catalog run in 0.46 seconds
+Notice: //server1//Stage[main]/Ppt_lesson::Lesson1::Sample4/File[/tmp/test.txt]/ensure: removed
+Notice: //server1/Puppet: Finished catalog run in 0.46 seconds 
 
 ~~~~
 ## factの確認
