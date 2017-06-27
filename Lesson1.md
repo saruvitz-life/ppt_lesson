@@ -2,7 +2,7 @@
 ## sample1.pp
 このモジュールはfileリソースを使用し、/tmp/test1.txtを作成します。  
 ~~~~
-# cat   
+# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample1.pp
 class ppt_lesson::lesson1::sample1 {
 
   # fileリソースの使い方
@@ -22,6 +22,10 @@ class ppt_lesson::lesson1::sample1 {
 # cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 include ppt_lesson::lesson1::sample1
 
+※マニフェストは、以下のように記述することもできます。
+# cat /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+class { 'ppt_lesson::lesson1::sample1': }
+
 ※以下のコマンドを実行すると、/tmp/test.txtが作成されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
 Notice: Compiled catalog for server1 in environment production in 0.09 seconds
@@ -40,8 +44,27 @@ Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
 ## sample2.pp
 このモジュールは、/tmp/test1.txtに出力するテキストをパラメータとして引き渡すサンプルです。 
 ~~~~
-# 
+# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample2.pp
+class ppt_lesson::lesson1::sample2 (
+  $msg = "Hello world."
+)
+{
+  # fileリソースの使い方
+  # https://docs.puppet.com/puppet/latest/types/file.html
+  # 
+  file { '/tmp/test.txt':
+    contents => ${msg}
+  }
+}
 
+※上記のモジュールを使用するマニフェストを、以下のとおり作成します。
+# cat/etc/puppet/modules/ppt_lesson/manifests/test2.pp
+class { 'ppt_lesson::lesson1::sample2': {
+  msg	=> "こんにちは"
+}
+
+※実行すると、/tmp/test1.txtのメッセージの内容が更新されます。
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test2.pp
 ~~~~
 ## sample3.pp
 このモジュールは、factから情報を取得し、環境ごとに/tmp/test1.txtを出力するサンプルです。 
@@ -52,7 +75,14 @@ Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
 ## sample4.pp
 このモジュールは、ファイルが存在する場合にファイルを取り消すサンプルです。 
 ~~~~
-# 
+# cat  
+
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test4.pp
+Notice: Compiled catalog for server1 in environment production in 0.11 seconds
+Notice: /Stage[main]/Ppt_lesson::Lesson1::Sample4/File[/tmp/test.txt]/ensure: removed
+Notice: Finished catalog run in 0.46 seconds
+Notice: //server1//Stage[main]/Ppt_lesson::Lesson1::Sample4/File[/tmp/test.txt]/ensure: removed
+Notice: //server1/Puppet: Finished catalog run in 0.46 seconds 
 
 ~~~~
 ## factの確認
