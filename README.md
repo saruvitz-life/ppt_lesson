@@ -37,17 +37,17 @@ Unpacking objects: 100% (91/91), done.
 マニフェストが適用されると、/tmp/test.txt が作成されます。  
 ~~~~
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
-Notice: Compiled catalog for ******.******.co.jp in environment production in 0.10 seconds
+Notice: Compiled catalog for server1 in environment production in 0.10 seconds
 Notice: /Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
 Notice: Finished catalog run in 0.32 seconds
-Notice: //******.******.co.jp//Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
-Notice: //******.******.co.jp/Puppet: Finished catalog run in 0.32 seconds
+Notice: //server1//Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
+Notice: //server1/Puppet: Finished catalog run in 0.32 seconds
 #
 
 ~~~~
   
 これで演習の準備は完了です。  
-引き続き、以下のドキュメントではサンプルを用意し、実際の設定自動化を紹介します。  
+引き続き、以下のドキュメントで実際の設定自動化を紹介していきます。  
   
 Lesson1.md  
 Lesson2.md…(作成中)  
