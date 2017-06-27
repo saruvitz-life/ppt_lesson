@@ -96,7 +96,8 @@ class ppt_lesson::lesson1::sample3 {
 ~~~~
 ## sample4.pp
 このモジュールは、ファイルが存在する場合にファイルを取り消すサンプルです。 
-# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample4.pp~~~~
+~~~~
+# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample4.pp
 class ppt_lesson::lesson1::sample4 {
 
   # fileリソースの使い方
@@ -141,14 +142,18 @@ class ppt_lesson::lesson1::sample5 {
 
 ※実行すると、/tmp/test.txtが作成され、所有者:puppet、グループ:puppet、パーミッション:644が設定されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test5.pp
+
 ~~~~
+
 ## factの確認
 以下のコマンドを実行し、Puppetで使用できるfactを確認してみましょう。
 ### Linux
 ~~~~
 # facter -p
+
 ~~~~
 ### Windows
 ~~~~
 C:\Program Files\Puppet Labs\Puppet\bin> facter -p
+
 ~~~~ 
