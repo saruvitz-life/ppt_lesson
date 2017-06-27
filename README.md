@@ -50,6 +50,7 @@ Notice: //******.******.co.jp/Puppet: Finished catalog run in 0.32 seconds
 引き続き、以下のドキュメントではサンプルを用意し、実際の設定自動化を紹介します。  
   
 Lesson1.md  
-Lesson2.md  
-Lesson3.md  
-Lesson4.md  
+Lesson2.md…(作成中)  
+Lesson3.md…(作成中)  
+Lesson4.md…(作成中)  
+　　
