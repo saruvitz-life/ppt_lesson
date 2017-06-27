@@ -1,9 +1,9 @@
 # Puppetの演習
-## Lesson 1 モジュールを準備する
+## モジュールを準備する
 公式のインストール手順に従い、Puppetのパッケージをインストールしてください。  
 https://docs.puppet.com/puppet/4.10/install_pre.html
 
-次に演習を始める前に、演習で使用するモジュールを準備しましょう。  
+演習を始める前に、演習で使用するモジュールを準備しましょう。  
 モジュールの配置先の情報を確認してみましょう。  
 ~~~~
 # puppet config print | grep module
@@ -34,12 +34,15 @@ Unpacking objects: 100% (91/91), done.
 # puppet module list | grep Lesson
 ├ Puppet Beginners Lesson (v1.1.0)
 ~~~~
-それではマニフェスト次に site.pp を作成します。  
-site.ppからモジュールを読み出すようにします。。  
+それではマニフェストを1つ適用してみましょう。  
+マニフェストが適用されると、/tmp/test.txt が作成されます。  
 ~~~~
-# puppet apply /etc/puppet/modules/ppt_lesson/manifests/init.pp
-Notice: Compiled catalog for ******.******.co.jp in environment production in 0.02 seconds
-Notice: Finished catalog run in 0.29 seconds
-Notice: //crosv1404ngs2.mictokyo.co.jp/Puppet: Finished catalog run in 0.29 seconds
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test1.pp
+Notice: Compiled catalog for ******.******.co.jp in environment production in 0.10 seconds
+Notice: /Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
+Notice: Finished catalog run in 0.32 seconds
+Notice: //******.******.co.jp//Stage[main]/Ppt_lesson::Lesson1::Sample1/File[/tmp/test.txt]/ensure: defined content as '{md5}3e25960a79dbc69b674cd4ec67a72c62'
+Notice: //******.******.co.jp/Puppet: Finished catalog run in 0.32 seconds
+#
 
 ~~~~
