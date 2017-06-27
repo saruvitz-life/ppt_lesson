@@ -2,7 +2,7 @@
 ## sample1.pp
 このモジュールはfileリソースを使用し、/tmp/test1.txtを作成します。  
 ~~~~
-# cat   
+# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample1.pp
 class ppt_lesson::lesson1::sample1 {
 
   # fileリソースの使い方
@@ -40,7 +40,7 @@ Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
 ## sample2.pp
 このモジュールは、/tmp/test1.txtに出力するテキストをパラメータとして引き渡すサンプルです。 
 ~~~~
-# cat
+# cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample2.pp
 class ppt_lesson::lesson1::sample2 (
   $msg = "Hello world."
 )
@@ -59,6 +59,8 @@ class { 'ppt_lesson::lesson1::sample2': {
   msg	=> "こんにちは"
 }
 
+※実行すると、/tmp/test1.txtのメッセージの内容が更新されます。
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test2.pp
 ~~~~
 ## sample3.pp
 このモジュールは、factから情報を取得し、環境ごとに/tmp/test1.txtを出力するサンプルです。 
