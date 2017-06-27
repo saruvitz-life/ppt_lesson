@@ -40,7 +40,24 @@ Notice: //server1/Puppet: Finished catalog run in 0.36 seconds
 ## sample2.pp
 このモジュールは、/tmp/test1.txtに出力するテキストをパラメータとして引き渡すサンプルです。 
 ~~~~
-# 
+# cat
+class ppt_lesson::lesson1::sample2 (
+  $msg = "Hello world."
+)
+{
+  # fileリソースの使い方
+  # https://docs.puppet.com/puppet/latest/types/file.html
+  # 
+  file { '/tmp/test.txt':
+    contents => ${msg}
+  }
+}
+
+※上記のモジュールを使用するマニフェストを、以下のとおり作成します。
+# cat/etc/puppet/modules/ppt_lesson/manifests/test2.pp
+class { 'ppt_lesson::lesson1::sample2': {
+  msg	=> "こんにちは"
+}
 
 ~~~~
 ## sample3.pp
