@@ -63,11 +63,11 @@ class { 'ppt_lesson::lesson1::sample2': {
   msg	=> "こんにちは"
 }
 
-※実行すると、/tmp/test1.txtのメッセージの内容が更新されます。
+※実行すると、/tmp/test.txtのメッセージの内容が更新されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test2.pp
 ~~~~
 ## sample3.pp
-このモジュールは、factから情報を取得し、環境ごとに/tmp/test1.txtを出力するサンプルです。 
+このモジュールは、factから情報を取得し、環境ごとに/tmp/test.txtを出力するサンプルです。 
 ~~~~
 # cat /etc/puppet/modules/ppt_lesson/manifests/lesson1/sample3.pp
 class ppt_lesson::lesson1::sample3 {
@@ -90,6 +90,9 @@ class ppt_lesson::lesson1::sample3 {
 
 } 
 
+※実行すると、環境ごとに異なる/tmp/test.txtのメッセージの内容が更新されます。  
+※このマニフェストをWindows環境で実行した場合、ファイルのパスが存在しないためエラーとなります。
+# puppet apply /etc/puppet/modules/ppt_lesson/manifests/test3.pp
 ~~~~
 ## sample4.pp
 このモジュールは、ファイルが存在する場合にファイルを取り消すサンプルです。 
