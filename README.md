@@ -46,9 +46,9 @@ Notice: //******.******.co.jp/Puppet: Finished catalog run in 0.32 seconds
 
 ~~~~
 
-これで演習の準備は完了です。
-引き続き、以下のドキュメントではサンプルを用意し、実際の設定自動化を紹介します。
-Lesson1.md
-Lesson2.md
-Lesson3.md
-Lesson4.md
+これで演習の準備は完了です。  
+引き続き、以下のドキュメントではサンプルを用意し、実際の設定自動化を紹介します。  
+Lesson1.md  
+Lesson2.md  
+Lesson3.md  
+Lesson4.md  
