@@ -140,11 +140,22 @@ class ppt_lesson::lesson1::sample5 {
 
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fd56f0155ed649e58f86aabad696d30c2ae9a955
 ※実行すると、/tmp/test.txtが作成され、所有者:puppet、グループ:puppet、パーミッション:644が設定されます。
 # puppet apply /etc/puppet/modules/ppt_lesson/manifests/test5.pp
 
 ~~~~
+<<<<<<< HEAD
 
+=======
+=======
+
+
+>>>>>>> 0f1f94996c802a4e23457645f1c0c8bfe0f0420a
+>>>>>>> fd56f0155ed649e58f86aabad696d30c2ae9a955
 ## factの確認
 以下のコマンドを実行し、Puppetで使用できるfactを確認してみましょう。
 ### Linux
